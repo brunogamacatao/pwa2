@@ -7,6 +7,14 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class Settings {
   private SETTINGS_KEY: string = '_settings';
+  public static FIREBASE = {
+    apiKey: "AIzaSyDe8FKP1Qj--nSbU1DYb1lKAobiNVfRJrs",
+    authDomain: "testepush-52a6f.firebaseapp.com",
+    databaseURL: "https://testepush-52a6f.firebaseio.com",
+    projectId: "testepush-52a6f",
+    storageBucket: "testepush-52a6f.appspot.com",
+    messagingSenderId: "1099366751370"    
+  };
 
   settings: any;
 

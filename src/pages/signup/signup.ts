@@ -15,9 +15,9 @@ export class SignupPage {
   // If you're using the username field with or without email, make
   // sure to add it to the type
   account: { name: string, email: string, password: string } = {
-    name: 'Test Human',
-    email: 'test@example.com',
-    password: 'test'
+    name: 'Bruno Catão',
+    email: 'bruno@email.com',
+    password: 'teste123'
   };
 
   // Our translated text strings
@@ -35,7 +35,7 @@ export class SignupPage {
 
   doSignup() {
     // Attempt to login in through our User service
-    this.user.signup(this.account).subscribe((resp) => {
+    this.user.signup(this.account).then((resp) => {
       this.navCtrl.push(MainPage);
     }, (err) => {
 

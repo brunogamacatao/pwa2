@@ -13,6 +13,11 @@ import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
+// Coisas do Firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -39,6 +44,9 @@ export function provideSettings(storage: Storage) {
     MyApp
   ],
   imports: [
+    AngularFireModule.initializeApp(Settings.FIREBASE),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     BrowserModule,
     HttpClientModule,
     TranslateModule.forRoot({
